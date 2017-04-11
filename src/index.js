@@ -235,6 +235,9 @@ var MaskedInput = React.createClass({
       e.target.value = value
       if (value) {
         this._updateInputSelection()
+        if (this.props.onChange) {
+          this.props.onChange(e)
+        }
       }
     }
   },
